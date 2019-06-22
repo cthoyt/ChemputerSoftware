@@ -19,16 +19,14 @@ For style guide used see http://xkcd.com/1513/
 """
 
 import os
-import sys
 import inspect
 import logging
 import time
 import multiprocessing
 
 HERE = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-sys.path.append(os.path.join(HERE, '..', 'platform_server'))
 
-from core.chempiler import Chempiler
+from chempiler import Chempiler
 
 # TODO: Make this look more like a client
 
