@@ -75,7 +75,7 @@ if __name__ == "__main__":
     if os.path.isfile(GRAPHML_FILE) and os.path.isfile(COMMAND_FILE):
         # deal with video recording
         if video_recording == "y":
-            from tools.vlogging import VlogHandler, RecordingSpeedFilter, recording_worker
+            from chempiler.tools.vlogging import VlogHandler, RecordingSpeedFilter, recording_worker
 
             # spawn queues
             message_queue = multiprocessing.Queue()
