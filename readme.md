@@ -4,26 +4,34 @@ This repo contains the software suite required to control a Chemputer rig.
 
 ## Getting Started
 
-Pull the repo and install the requirements file. You might also want to install [yEd](https://www.yworks.com/products/yed/download#download) for editing the GraphML files. I personally recommend using [Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows) as Python IDE, and this repo contains a settings file for colour markup for the ChASM file type. However, if you feel like using something else, I'm not stopping you.
-
-### Prerequisites
-
-* Python 3.6
-  * networkx 1.10
-  * numpy
-  * ply
-  * pyserial
-  * OpenCV
+Pull the repo and install the requirements file. You might also want to install
+[yEd](https://www.yworks.com/products/yed/download#download) for editing the
+GraphML files. I personally recommend using
+[Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows) as
+Python IDE, and this repo contains a settings file for colour markup for the
+ChASM file type. However, if you feel like using something else, I'm not
+stopping you.
 
 ### Installing
 
-The Chempiler suite comes with a requirements file, so to install all required Python packages simply open a command prompt in the root folder and type:
+To install the `chempiler` suite and its requirements, simply open a command
+prompt in the root folder and type:
 
-```
-pip install -r requirements.txt
+```bash
+$ pip install git+https://github.com/croningp/ChemputerSoftware.git
 ```
 
-This should take care of everything. If for some reason anything behaves funnily, I noted the latest versions of every package I tested the Chempiler with in the requirements file.
+To install in development mode, use:
+
+```bash
+$ git clone https://github.com/croningp/ChemputerSoftware.git
+$ cd ChemputerSoftware
+$ pip install -e .
+```
+
+This should take care of everything. If for some reason anything behaves
+funnily, I noted the latest versions of every package I tested the `chempiler`
+with in the `setup.cfg` file.
 
 ### Loading the ChASM markup in Pycharm
 
@@ -74,7 +82,7 @@ This subfolder contains all the source code in a hopefully somewhat logical orde
 ```
 .
 ├── ...
-├── platform_server
+├── chempiler
 │   ├── core                    # Contains the main Chempiler class
 │   ├── modules                 # Contains the various device drivers
 |   |   ├── pv_api              # API for the pumps and valves
