@@ -20,8 +20,9 @@
 import os
 import sys
 import inspect
+
 HERE = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-sys.path.append(os.path.join(HERE, '..', 'platform_server'))
+sys.path.append(os.path.join(HERE, os.pardir, 'src', 'chempiler'))
 
 
 # -- General configuration ------------------------------------------------
